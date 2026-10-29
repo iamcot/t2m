@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block bg %}radial-gradient(120% 80% at 20% 10%, #13c26c 0%, var(--green) 45%, var(--green-dark) 100%){% endblock %}
+{% block style %}
+.logo { position: absolute; top: 90px; left: 80px; height: 64px; filter: brightness(0) invert(1); }
+.text { position: absolute; left: 80px; right: 80px; top: {{ 420 if leo else 560 }}px; color: #fff; }
+.heading { font-weight: 800; font-size: {{ heading_size }}px; line-height: 1.12; letter-spacing: -1px; text-wrap: balance; }
+.heading em { font-style: normal; color: var(--yellow); }
+.sub { margin-top: 40px; font-size: 48px; line-height: 1.35; opacity: .95; text-wrap: pretty; }
+.leo { position: absolute; right: 40px; bottom: {{ SAFE_BOTTOM }}px; width: 520px; }
+.dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.10) 3px, transparent 3px);
+  background-size: 48px 48px; }
+{% endblock %}
+{% block body %}
+<div class="dots"></div>
+<img class="logo" src="{{ assets }}/img/anylearn_logo.png" alt="">
+<div class="text">
+  {% if heading %}<div class="heading">{{ heading }}</div>{% endif %}
+  {% if sub %}<div class="sub">{{ sub }}</div>{% endif %}
+</div>
+{% if leo %}<img class="leo" src="{{ assets }}/img/leo_front.png" alt="">{% endif %}
+{% endblock %}

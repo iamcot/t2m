@@ -1,0 +1,40 @@
+# Voice profiles. A template picks one for its narrator (src/t2m/templates.py); a brief can give a character
+# another one: [voices] narrator = "am_tram", be = "tre_nhi_nhanh".
+# provider: say (giọng macOS, miễn phí trên Mac) | fpt (FPT.AI, cần FPT_TTS_API_KEY) | silent (chỉ để canh thời gian)
+# speed, pitch (bán cung) áp dụng sau khi tổng hợp, giống nhau cho mọi nhà TTS. Các khóa khác chuyển thẳng cho nhà TTS.
+# Nghe thử: t2m voices try <profile> "câu thử"
+
+[profiles.ro_rang]
+label = "Rõ ràng, thân thiện (giới thiệu tính năng)"
+provider = "say"
+voice = "Linh"
+rate = 185
+
+[profiles.am_tram]
+label = "Trầm ấm (khoa học, lịch sử)"
+provider = "say"
+voice = "Linh"
+rate = 170
+pitch = -2
+
+[profiles.tre_nhi_nhanh]
+label = "Trẻ, nhí nhảnh (hài, đố vui)"
+provider = "say"
+voice = "Linh"
+rate = 200
+pitch = 3
+
+[profiles.fpt_banmai]
+label = "FPT.AI Ban Mai (nữ miền Bắc)"
+provider = "fpt"
+voice = "banmai"
+
+[profiles.fpt_lannhi]
+label = "FPT.AI Lan Nhi (nữ miền Nam)"
+provider = "fpt"
+voice = "lannhi"
+
+[profiles.nhap]
+label = "Im lặng, chỉ canh thời gian (bản nháp)"
+provider = "silent"
+wps = 2.6

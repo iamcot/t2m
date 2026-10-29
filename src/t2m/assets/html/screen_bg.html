@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block bg %}linear-gradient(180deg, var(--green-soft) 0%, #ffffff 55%, var(--green-soft) 100%){% endblock %}
+{% block style %}
+.title { position: absolute; left: 60px; right: 60px; top: 70px; height: {{ PHONE.y - 100 }}px; display: flex;
+  align-items: center; justify-content: center; text-align: center; font-weight: 800; font-size: {{ title_size }}px;
+  line-height: 1.12; letter-spacing: -1px; text-wrap: balance; }
+.title span { background: linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 92%, transparent 92%); }
+.glow { position: absolute; left: {{ PHONE.x - 60 }}px; top: {{ PHONE.y + 120 }}px; width: {{ PHONE.w + 120 }}px;
+  height: {{ PHONE.h - 120 }}px; border-radius: 120px; background: var(--green); opacity: .18; filter: blur(60px); }
+{% endblock %}
+{% block body %}
+<div class="glow"></div>
+{% if title %}<div class="title"><span>{{ title }}</span></div>{% endif %}
+{% endblock %}

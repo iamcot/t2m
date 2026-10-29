@@ -1,0 +1,38 @@
+# Chiến dịch ra mắt, T4 04/11: Tìm kiếm thông minh (plan 19, mục 4).
+# Các shot chạy trên site thật bằng tài khoản demo (dữ liệu scripts/seed_today_demo.sql), không dùng dữ liệu khách.
+# target: đường dẫn cho goto; selector Playwright cho tap / type (text=..., role=button[name='...'], css).
+# Thử riêng một shot: t2m record <job> --shot loc-tuoi
+
+template = "feature_tour"
+topic = "Tìm kiếm thông minh"
+angle = "Lọc theo tuổi bé, học thử miễn phí, đang giảm giá: vài chạm là ra lớp hợp con"
+link = "/search"
+campaign = "ra-mat-v2"
+notes = "Nhắc rằng chạm tên bé thì chỉ hiện lớp hợp tuổi bé. Không nêu tên khóa cụ thể."
+
+[shots.mo-tim-kiem]
+description = "Tìm 'bơi', danh sách lớp bơi hiện ra, cuộn xem vài lớp"
+steps = [
+  { action = "goto", target = "/search?q=b%C6%A1i" },
+  { action = "scroll", dy = 500 },
+  { action = "scroll", dy = -500 },
+]
+
+[shots.loc-tuoi]
+description = "Chạm chip tên bé: danh sách chỉ còn lớp hợp tuổi bé"
+steps = [
+  { action = "tap", target = "[aria-label='Tìm cho ai'] button >> nth=1", ms = 1500 },
+]
+
+[shots.hoc-thu]
+description = "Bật lọc Học thử: chỉ còn lớp có buổi học thử miễn phí"
+steps = [
+  { action = "tap", target = "[aria-label='Lọc nhanh'] >> text=Học thử", ms = 1500 },
+  { action = "scroll", dy = 400 },
+]
+
+[shots.giam-gia]
+description = "Bật thêm lọc Giảm giá: lớp đang giảm giá"
+steps = [
+  { action = "tap", target = "[aria-label='Lọc nhanh'] >> text=Giảm giá", ms = 1500 },
+]

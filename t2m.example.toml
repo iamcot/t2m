@@ -1,0 +1,16 @@
+# Copy thành t2m.toml (không commit). Mật khẩu và khóa chỉ để trong biến môi trường:
+#   T2M_DEMO_PASSWORD     tài khoản demo để quay màn hình (dữ liệu scripts/seed_today_demo.sql, không phải khách thật)
+#   T2M_STUDIO_PASSWORD   tài khoản creator "anyLEARN Studio" để gửi bài Khám phá
+#   ANTHROPIC_API_KEY     chỉ khi dùng --ai api
+#   FPT_TTS_API_KEY       chỉ khi dùng giọng FPT.AI
+
+site_url = "https://anylearn.vn"      # hoặc http://localhost:3000 khi quay site chạy tại máy
+# api_url = "http://localhost:8080/v2/api"   # mặc định = site_url + /v2/api
+demo_phone = ""
+studio_phone = ""
+ai_mode = "claude-code"                # claude-code (claude -p, dùng gói Claude đang có) | api
+ai_model = "claude-sonnet-5-5"         # chỉ dùng với --ai api
+encoder = "auto"                       # auto: h264_videotoolbox trên Mac, libx264 chỗ khác
+music_volume = 0.18                    # nhạc nền trong assets/music/ (tự hạ khi có giọng)
+jobs_dir = "jobs"
+db_path = "t2m.db"
