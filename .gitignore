@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+jobs/
+t2m.db
+t2m.toml
+.env
+.DS_Store

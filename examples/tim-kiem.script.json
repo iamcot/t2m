@@ -1,0 +1,78 @@
+{
+  "title": "Tìm kiếm thông minh: vài chạm ra lớp hợp con",
+  "hook": "Tìm lớp cho con mà lướt mãi không ra?",
+  "scenes": [
+    {
+      "id": "mo",
+      "narration": "Ba mẹ tìm lớp cho con mà lướt mãi không ra? Để Leo chỉ cách nhanh hơn nhé.",
+      "visual": {
+        "kind": "card",
+        "heading": "Tìm lớp cho con mà lướt mãi không ra?",
+        "leo": true
+      }
+    },
+    {
+      "id": "tim",
+      "narration": "Trên anyLEARN, ba mẹ gõ môn muốn học, ví dụ bơi. Các lớp bơi hiện ra ngay, có giá và lịch học rõ ràng.",
+      "on_screen": "Gõ môn con muốn học",
+      "visual": {
+        "kind": "screen",
+        "shot": "mo-tim-kiem"
+      }
+    },
+    {
+      "id": "tuoi",
+      "narration": "Chạm vào tên bé, danh sách chỉ còn những lớp hợp tuổi của con. Không phải đọc từng lớp xem nhận mấy tuổi nữa.",
+      "on_screen": "Chạm tên bé, đúng tuổi",
+      "visual": {
+        "kind": "screen",
+        "shot": "loc-tuoi"
+      }
+    },
+    {
+      "id": "thu",
+      "narration": "Muốn cho con đi thử trước? Bật Học thử, chỉ còn các lớp có buổi học thử miễn phí.",
+      "on_screen": "Lớp có học thử",
+      "visual": {
+        "kind": "screen",
+        "shot": "hoc-thu"
+      }
+    },
+    {
+      "id": "giam",
+      "narration": "Bật thêm Giảm giá để xem lớp nào đang có ưu đãi. Giá trên anyLEARN bằng hoặc rẻ hơn tại trường.",
+      "on_screen": "Lớp đang giảm giá",
+      "visual": {
+        "kind": "screen",
+        "shot": "giam-gia"
+      }
+    },
+    {
+      "id": "cta",
+      "narration": "Vài chạm là ra lớp hợp con. Ba mẹ vào anyLEARN, mục tìm kiếm, thử ngay hôm nay nhé.",
+      "visual": {
+        "kind": "card",
+        "heading": "Vài chạm là ra lớp hợp con",
+        "sub": "anylearn.vn/search",
+        "leo": true
+      }
+    }
+  ],
+  "cta": {
+    "text": "Thử tìm lớp cho con trên anyLEARN",
+    "link": "/search"
+  },
+  "captions": {
+    "facebook": "Tìm lớp cho con mà lướt mãi không ra lớp nào hợp? Trên anyLEARN, chạm tên bé là chỉ còn lớp hợp tuổi, bật Học thử hay Giảm giá là lọc xong. Thử ngay: anylearn.vn/search",
+    "tiktok": "Vài chạm là ra lớp hợp con: lọc theo tuổi bé, học thử, giảm giá.",
+    "youtube": "Tìm lớp cho con theo tuổi, học thử miễn phí, đang giảm giá trên anyLEARN.",
+    "zalo": "Ba mẹ thử tìm lớp cho bé theo đúng tuổi trên anyLEARN nhé: anylearn.vn/search",
+    "explore": "Mẹo tìm lớp hợp tuổi bé chỉ trong vài chạm."
+  },
+  "hashtags": [
+    "anyLEARN",
+    "timlopchocon",
+    "hocthu",
+    "phuhuynh"
+  ]
+}

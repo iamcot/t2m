@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body { font-family: sans-serif; margin: 0; background: #f6f7f9; }
+header { background: #00a651; color: #fff; padding: 16px; font-weight: 700; }
+.chips { display: flex; gap: 8px; padding: 12px; overflow-x: auto; }
+.chips button { border: 1px solid #c3f0d8; background: #fff; border-radius: 20px; padding: 8px 14px; }
+.chips button[aria-pressed=true] { background: #00a651; color: #fff; }
+.card { background: #fff; margin: 12px; border-radius: 12px; padding: 16px; height: 120px; }
+</style></head>
+<body>
+<header>anyLEARN · fake site cho test</header>
+<div class="chips" aria-label="Tìm cho ai"><button aria-pressed="true">Tất cả</button><button>Bin</button></div>
+<div class="chips" aria-label="Lọc nhanh"><button>Gần tôi</button><button>Học thử</button><button>Giảm giá</button></div>
+<div id="list"></div>
+<script>
+const list = document.getElementById('list');
+const draw = n => { list.innerHTML = Array.from({length: n}, (_, i) => `<div class="card">Lớp bơi ${i + 1}</div>`).join(''); };
+draw(8);
+document.querySelectorAll('.chips button').forEach(b => b.addEventListener('click', () => {
+  b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); draw(3);
+}));
+</script>
+</body></html>

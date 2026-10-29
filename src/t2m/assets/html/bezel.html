@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block bg %}transparent{% endblock %}
+{% block style %}
+.phone { position: absolute; left: {{ PHONE.x }}px; top: {{ PHONE.y }}px; width: {{ PHONE.w }}px; height: {{ PHONE.h }}px;
+  border-radius: 92px; overflow: hidden; box-shadow: 0 30px 80px rgba(7, 27, 51, .35); }
+/* The screen hole: its huge spread shadow paints the frame, following the rounded corners. */
+.hole { position: absolute; left: {{ BEZEL }}px; top: {{ BEZEL }}px; width: {{ SCREEN.w }}px; height: {{ SCREEN.h }}px;
+  border-radius: 72px; box-shadow: 0 0 0 200px #0d0f14; }
+.edge { position: absolute; inset: 0; border-radius: 92px; border: 3px solid #3a3f4a; }
+{% endblock %}
+{% block body %}
+<div class="phone"><div class="hole"></div><div class="edge"></div></div>
+{% endblock %}
